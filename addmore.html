@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        /* Navigation bar with maximum width and minimum height */
+        .nav {
+            background-color: #131313;
+            color: #fff;
+            padding: 5px 20px; /* Reduced padding to minimize height */
+            width: 100%; /* Full width of the viewport */
+            box-sizing: border-box; /* Include padding in the width calculation */
+            display: flex;
+            margin: 0px;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0; /* No border-radius for a minimalistic look */
+        }
+
+        .nav-logo img {
+            height: 30px; /* Adjusted logo height */
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+        }
+
+        .btn {
+            background-color: #060606;
+            color: #fff;
+            padding: 5px 15px; /* Reduced padding for smaller buttons */
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 10px; /* Added margin for spacing between buttons */
+        }
+
+        .btn:hover {
+            background-color: #0d0d0d;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #131313;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content button {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            border: none; /* Remove border from dropdown buttons */
+            background: none; /* Remove background from dropdown buttons */
+        }
+
+        .dropdown-content button:hover {
+            background-color: #0d0d0e;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 0px;
+            border-radius: 10px;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+            text-align: left;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-logo">
+            <img src="standby.jpg" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <button type="submit" class="btn">Home</button>
+            <div class="dropdown">
+                <button type="submit" class="btn">Profile</button>
+                <div class="dropdown-content">
+                    <button type="submit" class="btn">View/Edit</button>
+                    <button type="submit" class="btn">Register your Bus</button>
+                    <button type="submit" class="btn">LogOut</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form">
+            <form action="addmore2.html" method="post">
+                <div class="form-group">
+                    <label for="busName" class="form-label">BUS NAME</label>
+                    <select id="busName" name="busName" style="width: 100%; height: 35px;">
+                        <option value="red">Janaki</option>
+                        <option value="green">Sarika</option>
+                        <option value="blue">CCT</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="from" class="form-label">FROM</label>
+                    <input type="text" id="from" name="from" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="to" class="form-label">TO</label>
+                    <input type="text" id="to" name="to" class="form-input" required>
+                </div>
+                <button type="submit" class="btn">SEARCH</button> 
+            </form>
+        </div>
+    </div>
+</body>
+</html>

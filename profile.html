@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        h1 {
+             margin-top: 0;
+             text-align: center; /* Center the profile heading */
+             align-items: center;
+        }
+        .container {
+            background-color: #f7f6f4;
+            width: 500px;
+            margin: 50px auto;
+            border: 1px solid #eceaea;
+            padding: 20px;
+        }
+        .logo {
+            display: block; /* Make logo a block element */
+            margin: 0 auto; /* Center the logo */
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button {
+            display: block;
+            margin: auto;
+            width: 100%;
+            padding: 10px;
+            background-color: #0e0e0e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px; /* Add space between buttons */
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .btn {
+            background-color: #060606;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0d0d0d;
+        }
+        .nav {
+            background-color: #010101;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            margin-left: 20px;
+        }
+        .nav-links {
+            display: flex;
+            margin-right: 20px;
+        }
+        .nav-link {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #131313;
+            min-width: 160px;
+            box-shadow: 0px px 0px 0px rgba(0, 0, 0, 0);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #0d0d0e;}
+        .dropdown:hover .dropdown-content {display: block;}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-logo">
+            <img src="standby.jpg" alt="Logo" height="45">
+        </div>
+        <div class="nav-links">
+            <button type="submit" class="btn">Contact</button>
+            <button type="submit" class="btn">Home</button>
+            <button type="submit" class="btn">LogOut</button>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Profile</h1>
+        <div class="logo">
+            <img src="profile.png" alt="Profile Picture">
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <button class="button" type="submit">Apply For Bus</button>
+            <button class="button" type="submit">Edit</button> 
+        </form>
+    </div>
+</body>              
+</html>   

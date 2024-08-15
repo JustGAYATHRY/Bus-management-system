@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body {
+            /* font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4; */
+        /* } */ */
+
+        
+        .container {
+            background-color: #fff;
+            padding: 200px;
+            border-radius: 100px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        
+        }
+        .form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+            text-align: left;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        h2{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .btn {
+            background-color: #060606;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0d0d0d;
+        }
+        .nav {
+            background-color: #131313;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            margin-left: 20px;
+        }
+        .nav-links {
+            display: flex;
+            margin-right: 20px;
+        }
+        .nav-link {
+            margin-left: 20px;
+            text-decoration:solid;
+            color: #fff;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #131313;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #0d0d0e;}
+        .dropdown:hover .dropdown-content {display: block;}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-logo">
+             <img src="standby.jpg" alt="Logo" height="45">
+            
+        </div>
+        <div class="nav-links">
+            <button type="submit" class="btn">Home</button>
+            <div class="dropdown">
+                <button type="submit" class="btn">Profile</button>
+                <div class="dropdown-content">
+                    <button type="submit" class="btn">View/Edit</button>
+                    <button type="submit" class="btn">Register your Bus</button>
+                    <button type="submit" class="btn">LogOut</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form">
+            <form action="new_page.html" method="post">
+                <div class="form-group">
+                    <label for="busName" class="form-label">BUS NAME</label>
+                    <select id="busName" name="busName" style="width: 100%; height: 35px;">
+                        <option value="red">Janaki</option>
+                        <option value="green">Sarika</option>
+                        <option value="blue">CCT</option>
+                      </select>
+                </div>
+                <div class="form-group">
+                    <label for="from" class="form-label">FROM</label>
+                    <input type="text" id="from" name="from" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="to" class="form-label">TO</label>
+                    <input type="text" id="to" name="to" class="form-input" required>
+                </div>
+                <button type="submit" class="btn">SEARCH</button> 
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><h2>Bus Name </th></h2>
+                            <th><h2>Bus Route</th></h2>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bus 1</td>
+                            <td>Route 1</td>
+                            <td><button>ADD</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bus 2</td>
+                            <td>Route 2</td>
+                            <td><button>ADD</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bus 3</td>
+                            <td>Route 3</td>
+                            <td><button>ADD</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
